@@ -1,0 +1,28 @@
+//
+//  SingleCollectionViewCell.swift
+//  FiveDayStudy
+//
+//  Created by le tong on 2019/10/10.
+//  Copyright © 2019 iOS. All rights reserved.
+//
+
+import UIKit
+
+class SingleCollectionViewCell: UICollectionViewCell {
+    
+    var imgView = UIImageView()
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        imgView = UIImageView.init(frame: self.contentView.bounds)
+        self.contentView.addSubview(imgView)
+    }
+    
+    func setCurrentImageView(imgName: String) -> Void {
+        imgView.image = UIImage.init(named: imgName)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+}
